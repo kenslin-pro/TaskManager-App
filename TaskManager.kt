@@ -1,14 +1,20 @@
+// Task Manager
+
 data class Task(val id: Int, val description: String)
 
 class TaskManager {
   private val tasks = mutableListOf<Task>()
   private var taskIdCounter = 1
 
+  // add task to the task list
+
   fun addTask(description: String) {
     val task = Task(taskIdCounter++, description)
     tasks.add(task)
     println("Task added: $task")
   }
+
+  // remove task from task list
 
   fun removeTask(taskId: Int) {
     val taskToRemove = tasks.find { it.id == taskId }
@@ -20,6 +26,8 @@ class TaskManager {
     }
   }
 
+  // if the user eneters incorrect task, no task availabe will be displayed
+
   fun listTasks() {
     if (tasks.isEmpty()) {
       println("No tasks available.")
@@ -29,6 +37,8 @@ class TaskManager {
     }
   }
 }
+
+// Task list menu
 
 fun main() {
   val taskManager = TaskManager()
@@ -46,16 +56,25 @@ fun main() {
         print("Enter task description: ")
         val description = readLine() ?: ""
         taskManager.addTask(description)
+
+        //  user to enter task ID
+
       }
       2 -> {
         print("Enter task ID to remove: ")
         val taskId = readLine()?.toIntOrNull() ?: 0
         taskManager.removeTask(taskId)
       }
+
+      // USER exist task app
+
       3 -> taskManager.listTasks()
       4 -> {
         println("Exiting Task Manager. Goodbye!")
         return
+
+        // allow the user to enter a valid choice again
+
       }
       else -> println("Invalid choice. Please enter a valid option.")
     }

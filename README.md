@@ -14,13 +14,12 @@ The primary purpose of this project is to strengthen my proficiency in Kotlin pr
 
 ## Software Demo
 
-Check out the [Software Demo Video](http://youtube.link.goes.here) for a 4-5 minute walkthrough of the Task Manager application. The video focuses on the software running in action and provides insights into the code structure and Kotlin language features.
+Check out the [Software Demo Video](https://youtu.be/uVg1UipAdl4) for a 4-5 minute walkthrough of the Task Manager application. The video focuses on the software running in action and provides insights into the code structure and Kotlin language features.
 
 ## Development Environment
 
-- **Kotlin:** Version X.X.X
-- **IDE:** IntelliJ IDEA (or any other Kotlin-compatible IDE)
-- **Build Tool:** Gradle (optional)
+- **Kotlin:** Kotlin Language support
+- **IDE:** IntelliJ IDEA 
 - **Version Control:** Git
 
 ## Useful Websites
